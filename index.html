@@ -70,7 +70,9 @@
                 <!-- Contact preview -->
                 <div class="contactPreview"
                     v-for="(contact, idx) in contacts"
-                    @click="showSelected(idx)">
+                    @click="showSelected(idx)"
+                    :class="activePosition === idx ? 'thumbActive':''">
+
                     <div class="thumbPreview">
                         <img class="rounded" :src="contact.avatar" alt="Profile pic">
                         <div class="contactInfo">
@@ -81,6 +83,7 @@
                     <div class="activeTime">
                        {{contact.messages[0].date}}
                     </div>
+
                 </div>
 
             </div>

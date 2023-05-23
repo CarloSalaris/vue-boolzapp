@@ -67,7 +67,11 @@ footer {
 }
 
 .contactPreview:hover {
-    background-color:#eaeaea9a;
+    background-color:#f3f3f39a;
+}
+
+.thumbActive {
+    background-color: #e9ebeb;
 }
 
     .thumbPreview {
