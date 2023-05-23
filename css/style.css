@@ -66,6 +66,10 @@ footer {
     cursor: pointer;
 }
 
+.contactPreview:hover {
+    background-color:#eaeaea9a;
+}
+
     .thumbPreview {
         height: 100%;
         display: flex;
