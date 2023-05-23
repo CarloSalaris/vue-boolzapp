@@ -29,6 +29,7 @@ footer {
 
 header {
     background-color: #eaeaea;
+    justify-content: space-between;
 }
 
 footer {
@@ -89,3 +90,8 @@ main {
 /***************
     DEBUG
 ***************/
+
+.thumbContact,
+.iconsContainer {
+    border: solid 1px violet;
+}
