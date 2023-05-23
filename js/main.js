@@ -2,6 +2,7 @@ const{createApp} = Vue
 createApp({
     data(){
         return {
+            activePosition: 0,
             userAccount: [
                 {
                     name: 'Carlo',
@@ -175,9 +176,9 @@ createApp({
         }
     },
     methods: {
-        selectConversation() {
-            
-        }
+        showSelected(value) {
+			this.activePosition = value;
+		}
     },
     mounted() {
 	  //code

@@ -68,7 +68,9 @@
             <div id="contactsListContainer">
 
                 <!-- Contact preview -->
-                <div class="contactPreview" v-for="contact in contacts" >
+                <div class="contactPreview"
+                    v-for="(contact, idx) in contacts"
+                    @click="showSelected(idx)">
                     <div class="thumbPreview">
                         <img class="rounded" :src="contact.avatar" alt="Profile pic">
                         <div class="contactInfo">
@@ -106,7 +108,7 @@
             <main>
 
                 <!-- Messages printed dynamically -->
-                <div class="msgRow" v-for="item in contacts[0].messages">
+                <div class="msgRow" v-for="item in contacts[activePosition].messages">
                     <div class="msg" :class="(item.status === 'sent') ? 'msgSent' : 'msgReceived'">
                         <div class="msgText">{{item.message}}</div>
                         <div class="msgActiveTime">
