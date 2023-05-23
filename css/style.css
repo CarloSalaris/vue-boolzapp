@@ -63,6 +63,7 @@ footer {
     width: 100%;
     border-bottom: 1px solid #e2e2e2;
     overflow:hidden;
+    cursor: pointer;
 }
 
     .thumbPreview {
@@ -120,6 +121,7 @@ span.rounded {
     justify-content: space-evenly;
 }
 
+/* ICONS */
 .iconsContainer {
     display: flex;
     padding: 10px;
@@ -209,6 +211,11 @@ span.rounded {
         border: none;
         padding: 5px;
     }
+
+#contactsListContainer {
+    height: calc(100% - 160px);
+    overflow-y: scroll;
+}
 
 /* RIGHT COLUMN */
 main {

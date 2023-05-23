@@ -65,10 +65,10 @@
             </div>
 
             <!-- Contacts list -->
-            <div id="contactsListContainer" v-for="contact in contacts" >
+            <div id="contactsListContainer">
 
                 <!-- Contact preview -->
-                <div class="contactPreview">
+                <div class="contactPreview" v-for="contact in contacts" >
                     <div class="thumbPreview">
                         <img class="rounded" :src="contact.avatar" alt="Profile pic">
                         <div class="contactInfo">
@@ -104,26 +104,17 @@
 
             <!-- Main message section -->
             <main>
-                <!-- Received message model -->
-                <div class="msgRow">
-                    <div class="msg msgReceived">
-                        <div class="msgText">Prova messaggio</div>
+
+                <!-- Messages printed dynamically -->
+                <div class="msgRow" v-for="item in contacts[0].messages">
+                    <div class="msg" :class="(item.status === 'sent') ? 'msgSent' : 'msgReceived'">
+                        <div class="msgText">{{item.message}}</div>
                         <div class="msgActiveTime">
-                            {{contacts[0].messages[2].date}}
+                            {{item.date}}
                         </div>
                     </div>
                 </div>
-
-                <!-- Sent message model -->
-                <div class="msgRow">
-                    <div class="msg msgSent">
-                        <div class="msgText">Prova messaggio un po' più lungo per vedere come si adatta il riquadro</div>
-                        <div class="msgActiveTime">
-                            {{contacts[0].messages[2].date}}
-                        </div>
-                    </div>
-                </div>
-
+                
             </main>
 
             <!-- Footer -->

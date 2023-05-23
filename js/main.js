@@ -175,7 +175,9 @@ createApp({
         }
     },
     methods: {
-            //code
+        selectConversation() {
+            
+        }
     },
     mounted() {
 	  //code
