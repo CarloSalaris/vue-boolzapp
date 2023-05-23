@@ -19,6 +19,11 @@ img {
     max-width: 100%;
 }
 
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
 /***************
     UTILITIES
 ***************/
@@ -26,7 +31,7 @@ header,
 footer {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 60px;
     padding: 5px;
 }
 
@@ -43,14 +48,46 @@ footer {
 .thumbPreview {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
     .thumbPreview img {
         width: 40px;
         height: 40px;
-        border-radius: 50%;
     }
+
+.rounded {
+    border-radius: 50%;
+}
+
+span.rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #8edafc;
+}
+
+.searchBar {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #adadad;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.iconsContainer {
+    display: flex;
+    padding: 10px;
+    gap: 15px;
+    font-size: 18px;
+    color: #adadad;
+}
 
 /***************
     STRUCTURE
@@ -58,7 +95,7 @@ footer {
 
 /* BACKGROUND */
 #bg_header {
-    height: 110px;
+    height: 115px;
     background-color: #009688;
 }
 
@@ -88,17 +125,26 @@ footer {
 .bellWarning {
     height: 60px;
     background-color: #8edafc;
+    padding: 5px;
 }
 
-#contactSearchBar {
-    height: 30px;
+#SearchBarContainer {
+    height: 40px;
     padding: 5px;
+    background-color: #fafafa;
     border-bottom: solid 1px #e2e2e2;
 }
 
+    #contactSearchBar {
+        width: 90%;
+        height: 100%;
+        border: none;
+        padding: 5px;
+    }
+
 /* RIGHT COLUMN */
 main {
-    height: calc(100% - 100px);
+    height: calc(100% - 120px);
     overflow-y: scroll;
 }
 
@@ -115,7 +161,7 @@ footer input {
     DEBUG
 ***************/
 
-.thumbContact,
+/* .thumbContact,
 .iconsContainer {
     border: solid 1px violet;
-}
+} */

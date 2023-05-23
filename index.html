@@ -27,21 +27,35 @@
         <div id="leftCol">
             <header>
                 <div class="thumbPreview">
-                    <img src="https://picsum.photos/100?random=1" alt="Profile pic">
+                    <img class="rounded" src="https://picsum.photos/100?random=1" alt="Profile pic">
                     <span>Name</span>
                 </div>
                 <div class="iconsContainer">
-                    icon
-                    icon 
-                    icon
+                    <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
+                    <a href="#"><i class="fa-solid fa-message"></i></a>
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                 </div>
             </header>
             <!-- warning -->
-            <div class="bellWarning thumbPreview"></div>
+            <div class="bellWarning thumbPreview">
+                <span class="rounded">
+                    <a href="#"><i class="fa-solid fa-bell-slash"></i></a>
+                </span>
+                <div>
+                    <div>Ricevi notifiche di nuovi messaggi</div>
+                    <a href="#">Attiva notifiche desktop</a>
+
+                </div>
+            </div>
 
             <!-- search bar -->
-            <div id="contactSearchBar">
-                search bar
+            <div id="SearchBarContainer">
+                <div class="searchBar">
+                    <a>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <input type="text" name="" id="contactSearchBar" placeholder="Cerca o inizia una nuova chat">
+                </div>
             </div>
 
             <!-- Contacts list -->
@@ -54,13 +68,13 @@
         <div id="rightCol">
             <header>
                 <div class="thumbPreview">
-                    <img src="https://picsum.photos/100?random=2" alt="Profile pic">
+                    <img class="rounded" src="https://picsum.photos/100?random=2" alt="Profile pic">
                     <span>Name</span>
                 </div>
                 <div class="iconsContainer">
-                    icon
-                    icon 
-                    icon
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="fa-solid fa-paperclip"></i></a> 
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                 </div>
             </header>
 
@@ -69,9 +83,17 @@
             </main>
 
             <footer>
-                <span>icon</span>
+                <span>
+                    <a href="#">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </a>
+                </span>
                 <input type="text" name="" id="messageInput" placeholder="Scrivi un messaggio">
-                <span>icon</span>
+                <span>
+                    <a href="#">
+                        <i class="fa-solid fa-microphone"></i>
+                    </a>
+                </span>
             </footer>
         </div>
 
