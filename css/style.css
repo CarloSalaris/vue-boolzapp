@@ -13,7 +13,10 @@
     height: 100vh;
     position: relative;
     background-color: #d7dbd3;
+}
 
+img {
+    max-width: 100%;
 }
 
 /***************
@@ -23,7 +26,7 @@ header,
 footer {
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 50px;
     padding: 5px;
 }
 
@@ -37,13 +40,25 @@ footer {
     justify-content:space-evenly;
 }
 
+.thumbPreview {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+    .thumbPreview img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
 /***************
     STRUCTURE
 ***************/
 
 /* BACKGROUND */
 #bg_header {
-    height: 120px;
+    height: 110px;
     background-color: #009688;
 }
 
@@ -83,7 +98,7 @@ footer {
 
 /* RIGHT COLUMN */
 main {
-    height: calc(100% - 80px);
+    height: calc(100% - 100px);
     overflow-y: scroll;
 }
 
