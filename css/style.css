@@ -23,8 +23,8 @@ header,
 footer {
     display: flex;
     align-items: center;
-    height: 60px;
-    padding: 10px;
+    height: 40px;
+    padding: 5px;
 }
 
 header {
@@ -34,6 +34,7 @@ header {
 
 footer {
     background-color: #f3eeea;
+    justify-content:space-evenly;
 }
 
 /***************
@@ -82,8 +83,16 @@ footer {
 
 /* RIGHT COLUMN */
 main {
-    height: calc(100% - 120px);
+    height: calc(100% - 80px);
     overflow-y: scroll;
+}
+
+footer input {
+    flex-basis: 80%;
+    height: 90%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 
