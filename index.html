@@ -17,6 +17,7 @@
 <body>
     
 <div id="app">
+
     <div id="bg_header"></div>
     <div id="bg_body"></div>
 
@@ -27,8 +28,8 @@
         <div id="leftCol">
             <header>
                 <div class="thumbPreview">
-                    <img class="rounded" src="https://picsum.photos/100?random=1" alt="Profile pic">
-                    <span>Name</span>
+                    <img class="rounded" :src="userAccount[0].avatar" alt="Profile pic">
+                    <span>{{userAccount[0].name}}</span>
                 </div>
                 <div class="iconsContainer">
                     <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
@@ -66,10 +67,11 @@
 
         <!-- RIGHT COLUMN -->
         <div id="rightCol">
+            <!-- Header -->
             <header>
                 <div class="thumbPreview">
-                    <img class="rounded" src="https://picsum.photos/100?random=2" alt="Profile pic">
-                    <span>Name</span>
+                    <img class="rounded" :src="contacts[0].avatar" alt="Profile pic">
+                    <span>{{contacts[0].name}}</span>
                 </div>
                 <div class="iconsContainer">
                     <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -78,10 +80,25 @@
                 </div>
             </header>
 
+            <!-- Main message section -->
             <main>
-                MAIN BODY
+                <!-- Received message model -->
+                <div class="msgRow">
+                    <div class="msg msgReceived">
+                        Prova messaggio
+                    </div>
+                </div>
+
+                <!-- Sent message model -->
+                <div class="msgRow">
+                    <div class="msg msgSent">
+                        Prova messaggio
+                    </div>
+                </div>
+
             </main>
 
+            <!-- Footer -->
             <footer>
                 <span>
                     <a href="#">
@@ -98,6 +115,7 @@
         </div>
 
     </div>
+
 </div>
 
 
