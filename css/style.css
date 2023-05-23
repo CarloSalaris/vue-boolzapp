@@ -1,0 +1,91 @@
+/***************
+    GENERAL
+***************/
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#app {
+    height: 100vh;
+    position: relative;
+    background-color: #d7dbd3;
+
+}
+
+/***************
+    UTILITIES
+***************/
+header,
+footer {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+}
+
+header {
+    background-color: #eaeaea;
+}
+
+footer {
+    background-color: #f3eeea;
+}
+
+/***************
+    STRUCTURE
+***************/
+
+/* BACKGROUND */
+#bg_header {
+    height: 120px;
+    background-color: #009688;
+}
+
+/* MAIN CONTAINER */
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #e3dbd4;
+    width: 80%;
+    height: 95%;
+}
+
+#leftCol {
+    background-color: #ffffff;
+    flex-basis: 33%;
+    border-right: solid 2px #e2e2e2;
+}
+
+#rightCol {
+    flex-basis: 67%;
+}
+
+/* LEFT COLUMN */
+.bellWarning {
+    height: 60px;
+    background-color: #8edafc;
+}
+
+#contactSearchBar {
+    height: 30px;
+    padding: 5px;
+    border-bottom: solid 1px #e2e2e2;
+}
+
+/* RIGHT COLUMN */
+main {
+    height: calc(100% - 120px);
+    overflow-y: scroll;
+}
+
+
+/***************
+    DEBUG
+***************/
