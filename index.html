@@ -75,7 +75,7 @@
                     v-for="(contact, idx) in contacts"
                     @click="showSelected(idx)"
                     :class="activePosition === idx ? 'thumbActive':''"
-                    v-show="(contact.name.includes(contactSearch) || contactSearch === '')">
+                    v-show="(contact.name.toLowerCase().includes(contactSearch.toLowerCase()) || contactSearch === '')">
 
                     <div class="thumbPreview">
                         <img class="rounded" :src="contact.avatar" alt="Profile pic">
@@ -98,10 +98,10 @@
             <!-- Header -->
             <header>
                 <div class="thumbPreview">
-                    <img class="rounded" :src="contacts[0].avatar" alt="Profile pic">
+                    <img class="rounded" :src="contacts[activePosition].avatar" alt="Profile pic">
                     <div class="contactInfo">
-                        <h4>{{contacts[0].name}}</h4>
-                        <span>Ultimo accesso {{contacts[0].messages[2].date}} </span>
+                        <h4>{{contacts[activePosition].name}}</h4>
+                        <span>Ultimo accesso {{contacts[activePosition].messages[contacts[activePosition].messages.length -1].date}} </span>
                     </div>
                 </div>
                 <div class="iconsContainer">

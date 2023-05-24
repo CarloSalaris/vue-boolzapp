@@ -32,6 +32,10 @@ body {
     margin: auto;
 }
 
+h4 {
+    margin-bottom: 5px;
+}
+
 img {
     max-width: 100%;
 }
@@ -71,8 +75,8 @@ footer {
 .contactPreview {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    height: 70px;
+    padding: 7px;
+    height: 65px;
     width: 100%;
     border-bottom: 1px solid #e2e2e2;
     overflow:hidden;
@@ -92,6 +96,8 @@ footer {
         display: flex;
         align-items: center;
         gap: 10px;
+        padding: 5px;
+        overflow: hidden;
     }
 
         .thumbPreview img {
@@ -246,6 +252,12 @@ span.rounded {
 }
 
 /* RIGHT COLUMN */
+
+#rightCol .contactInfo span {
+    color: #adadad;
+    font-size: 14px;
+}
+
 main {
     height: calc(100% - 120px);
     overflow-y: scroll;
