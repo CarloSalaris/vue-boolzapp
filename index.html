@@ -59,7 +59,11 @@
                     <a>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
-                    <input type="text" name="" id="contactSearchBar" placeholder="Cerca o inizia una nuova chat">
+                    <input
+                        type="text"
+                        id="contactSearchBar"
+                        placeholder="Cerca o inizia una nuova chat"
+                        v-model="contactSearch">
                 </div>
             </div>
 
@@ -70,7 +74,8 @@
                 <div class="contactPreview"
                     v-for="(contact, idx) in contacts"
                     @click="showSelected(idx)"
-                    :class="activePosition === idx ? 'thumbActive':''">
+                    :class="activePosition === idx ? 'thumbActive':''"
+                    v-show="(contact.name.includes(contactSearch) || contactSearch === '')">
 
                     <div class="thumbPreview">
                         <img class="rounded" :src="contact.avatar" alt="Profile pic">

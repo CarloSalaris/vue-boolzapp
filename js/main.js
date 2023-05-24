@@ -5,6 +5,7 @@ createApp({
         return {
             activePosition: 0,
             newMessage: '',
+            contactSearch: '',
             DateTime: DateTime,
             dateNow: (DateTime.now()).toLocaleString(DateTime.TIME_24_SIMPLE),
             userAccount: [
