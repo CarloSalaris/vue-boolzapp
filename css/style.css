@@ -165,6 +165,7 @@ span.rounded {
     min-width: 300px;
     width:fit-content;
     border-radius: 10px;
+    position: relative;
 }
 .msg .msgText {
     margin: 15px;
@@ -188,7 +189,13 @@ span.rounded {
         background-color: #ffffff;
     }
 
-
+.arrowTendina {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 12px;
+    padding: 5px;
+}
 /***************
     STRUCTURE
 ***************/

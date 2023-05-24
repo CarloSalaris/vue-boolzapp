@@ -8,6 +8,7 @@ createApp({
             contactSearch: '',
             DateTime: DateTime,
             dateNow: (DateTime.now()).toLocaleString(DateTime.TIME_24_SIMPLE),
+            msgOverPosition: null,
             userAccount: [
                 {
                     name: 'Carlo',
