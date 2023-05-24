@@ -141,8 +141,12 @@
                     v-model="newMessage"
                     @keyup.enter="addMessage">
                 <span>
-                    <a href="#">
+                    <a href="#" v-if="newMessage === ''">
                         <i class="fa-solid fa-microphone"></i>
+                    </a>
+
+                    <a href="#" v-if="newMessage !== ''">
+                        <i class="fa-regular fa-paper-plane"></i>
                     </a>
                 </span>
             </footer>
