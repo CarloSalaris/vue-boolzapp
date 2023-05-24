@@ -1,8 +1,12 @@
 const{createApp} = Vue
+let DateTime = luxon.DateTime;
 createApp({
     data(){
         return {
             activePosition: 0,
+            newMessage: '',
+            DateTime: DateTime,
+            dateNow: (DateTime.now()).toLocaleString(DateTime.TIME_24_SIMPLE),
             userAccount: [
                 {
                     name: 'Carlo',
@@ -178,7 +182,15 @@ createApp({
     methods: {
         showSelected(value) {
 			this.activePosition = value;
-		}
+		},
+        addMessage() {
+            this.contacts[this.activePosition].messages.push({
+                date: this.dateNow,
+                message: this.newMessage,
+                status: 'sent'
+            })
+            console.log(this.contacts[this.activePosition].messages);
+        }
     },
     mounted() {
 	  //code

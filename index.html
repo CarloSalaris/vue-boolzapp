@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="activeTime">
-                        {{contact.messages[0].date}}
+                        {{(contact.messages[0].date).toLocaleString(DateTime.TIME_24_SIMPLE)}}
                     </div>
 
                 </div>
@@ -128,7 +128,13 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </a>
                 </span>
-                <input type="text" name="" id="messageInput" placeholder="Scrivi un messaggio">
+                <input
+                    type="text"
+                    name="" 
+                    id="messageInput"
+                    placeholder="Scrivi un messaggio"
+                    v-model="newMessage"
+                    @keyup.enter="addMessage">
                 <span>
                     <a href="#">
                         <i class="fa-solid fa-microphone"></i>
@@ -142,6 +148,8 @@
 
 
 
+<!-- Luxon -->
+<script src=" https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js "></script>
 <!-- VueJS -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <!-- JS Files  -->

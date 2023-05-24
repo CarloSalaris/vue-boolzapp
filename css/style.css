@@ -26,7 +26,7 @@ body {
     z-index: 500;
     position: relative;
     display: flex;
-    background-color: #e3dbd4;
+    /* background-color: #e3dbd4; */
     width: 80%;
     height: 100%;
     margin: auto;
@@ -168,6 +168,8 @@ span.rounded {
     color: #adadad;
     text-align: end;
     align-self: flex-end;
+    font-size: 12px;
+
 }
 
     .msgSent {
@@ -220,6 +222,8 @@ span.rounded {
     height: 60px;
     background-color: #8edafc;
     padding: 5px;
+    font-size: 13px;
+
 }
 
 #SearchBarContainer {
