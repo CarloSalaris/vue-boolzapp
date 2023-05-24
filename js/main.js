@@ -183,6 +183,13 @@ createApp({
         showSelected(value) {
 			this.activePosition = value;
 		},
+        receiveMessage() {
+            this.contacts[this.activePosition].messages.push({
+                date: this.dateNow,
+                message: 'ok',
+                status: 'received'
+            })
+        },
         addMessage() {
             if (this.newMessage !== '') {this.contacts[this.activePosition].messages.push({
                 date: this.dateNow,
@@ -191,6 +198,7 @@ createApp({
             })}
             this.newMessage = '';
             console.log(this.contacts[this.activePosition].messages);
+            setTimeout(this.receiveMessage, 1000)
         }
     },
     mounted() {
