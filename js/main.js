@@ -8,7 +8,9 @@ createApp({
             contactSearch: '',
             DateTime: DateTime,
             dateNow: (DateTime.now()).toLocaleString(DateTime.TIME_24_SIMPLE),
-            msgOverPosition: null,
+            msgArrowUpPosition: null,
+            msgArrowDownPosition: null,
+            msgTendinaPosition: null,
             userAccount: [
                 {
                     name: 'Carlo',
@@ -201,6 +203,18 @@ createApp({
             this.newMessage = '';
             console.log(this.contacts[this.activePosition].messages);
             setTimeout(this.receiveMessage, 1000)
+        },
+        showTendina(index) {
+            if (this.msgTendinaPosition !== index) {
+                this.msgTendinaPosition = index;
+                this.msgArrowUpPosition = index;
+                this.msgArrowDownPosition = null;
+            } else {
+                this.msgTendinaPosition = !index;
+                this.msgArrowUpPosition = null;
+                this.msgArrowDownPosition = index;
+            }
+            console.log('prova showTendina');
         }
     },
     mounted() {

@@ -120,17 +120,35 @@
                     <!-- Message -->
                     <div class="msg"
                         :class="(item.status === 'sent') ? 'msgSent' : 'msgReceived'"
-                        @mouseover="msgOverPosition = idx"
-                        @mouseleave="msgOverPosition = !idx">
+                        @mouseenter="msgArrowDownPosition = idx"
+                        @mouseleave="msgArrowDownPosition = !idx">
                         <div class="msgText">{{item.message}}</div>
                         <div class="msgActiveTime">
                             {{item.date}}
                         </div>
 
                         <!-- arrow message tendina -->
-                        <a href="#" v-if="msgOverPosition === idx" class="arrowTendina">
-                            <i class="fa-solid fa-chevron-down"></i>
+                        <a href="#"
+                            v-if="msgArrowDownPosition === idx"
+                            class="arrowTendina"
+                            @click="showTendina(idx)">
+                            
+                            <!-- arrowDown -->
+                            <i class="fa-solid fa-chevron-down"
+                                v-if="msgArrowUpPosition !== idx"></i>
+                            
+                            <!-- arrowUp-->
+                            <i class="fa-solid fa-chevron-up"
+                                v-if="msgArrowUpPosition === idx"></i>    
                         </a>
+
+                        <!-- Menu tendina -->
+                        <div class="msgTendina" v-if="msgTendinaPosition === idx">
+                            <ul>
+                                <li><a href="#">Message info</a></li>
+                                <li><a href="#">Delete message</a></li>
+                            </ul>
+                        </div>
 
                     </div>
                     
