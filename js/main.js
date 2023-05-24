@@ -200,6 +200,7 @@ createApp({
                 message: this.newMessage,
                 status: 'sent'
             })}
+
             this.newMessage = '';
             console.log(this.contacts[this.activePosition].messages);
             setTimeout(this.receiveMessage, 1000)
