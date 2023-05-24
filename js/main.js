@@ -184,11 +184,12 @@ createApp({
 			this.activePosition = value;
 		},
         addMessage() {
-            this.contacts[this.activePosition].messages.push({
+            if (this.newMessage !== '') {this.contacts[this.activePosition].messages.push({
                 date: this.dateNow,
                 message: this.newMessage,
                 status: 'sent'
-            })
+            })}
+            this.newMessage = '';
             console.log(this.contacts[this.activePosition].messages);
         }
     },
