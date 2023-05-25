@@ -266,6 +266,10 @@ span.rounded {
     color: inherit;
 }
 
+.bellWarning a i:hover {
+    color: #0fa3dd;
+}
+
 #SearchBarContainer {
     height: 40px;
     padding: 5px;
