@@ -186,6 +186,13 @@ createApp({
             
         }
     },
+
+    watch: {
+        activePosition() {
+            this.msgTendinaPosition = null;
+        }
+    },
+
     methods: {
         showSelected(value) {
 			this.activePosition = value;
@@ -228,6 +235,7 @@ createApp({
             this.showTendina(index);
         }
     },
+
     mounted() {
 	  //code
         console.log("ho caricato l'app");
