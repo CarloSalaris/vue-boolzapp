@@ -178,6 +178,7 @@ span.rounded {
     border-radius: 10px;
     position: relative;
 }
+
 .msg .msgText {
     margin: 15px;
 }
@@ -190,6 +191,7 @@ span.rounded {
 
 }
 
+    /* msg sent or received */
     .msgSent {
         background-color: #d5f9ba;
         justify-self: end;
@@ -200,6 +202,7 @@ span.rounded {
         background-color: #ffffff;
     }
 
+
 .arrowTendina {
     position: absolute;
     top: 5px;
@@ -207,6 +210,15 @@ span.rounded {
     font-size: 12px;
     padding: 5px;
 }
+
+    /* make msg menu arrow visible on hover */
+    .msg a.arrowTendina {
+        display: none;
+    }
+    .msg:hover a.arrowTendina {
+        display: inline-block;
+    }
+
 
 .msgTendina {
     position: absolute;

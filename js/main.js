@@ -9,7 +9,6 @@ createApp({
             contactSearch: '',
             dateNow: (DateTime.now()).toLocaleString(DateTime.TIME_24_SIMPLE),
             msgArrowUpPosition: null,
-            msgArrowDownPosition: null,
             msgTendinaPosition: null,
             userAccount: [
                 {
@@ -203,9 +202,10 @@ createApp({
                 message: 'ok',
                 status: 'received'
             })
+            
         },
         addMessage() {
-            if (this.newMessage !== '' && this.newMessage.split(' ').length > 0) {
+            if (this.newMessage !== '') {
                 this.contacts[this.activePosition].messages.push({
                 date: this.dateNow,
                 message: this.newMessage,
@@ -222,11 +222,9 @@ createApp({
             if (this.msgTendinaPosition !== index) {
                 this.msgTendinaPosition = index;
                 this.msgArrowUpPosition = index;
-                this.msgArrowDownPosition = null;
             } else {
                 this.msgTendinaPosition = !index;
                 this.msgArrowUpPosition = null;
-                this.msgArrowDownPosition = index;
             }
             console.log('prova showTendina');
         },
