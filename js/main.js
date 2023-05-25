@@ -195,15 +195,17 @@ createApp({
             })
         },
         addMessage() {
-            if (this.newMessage !== '') {this.contacts[this.activePosition].messages.push({
+            if (this.newMessage !== '' && this.newMessage !== ' ') {this.contacts[this.activePosition].messages.push({
                 date: this.dateNow,
                 message: this.newMessage,
                 status: 'sent'
-            })}
+            })
+            setTimeout(this.receiveMessage, 1000)
+            }
 
             this.newMessage = '';
             console.log(this.contacts[this.activePosition].messages);
-            setTimeout(this.receiveMessage, 1000)
+            
         },
         showTendina(index) {
             if (this.msgTendinaPosition !== index) {
