@@ -216,6 +216,10 @@ createApp({
                 this.msgArrowDownPosition = index;
             }
             console.log('prova showTendina');
+        },
+        msgDelete(index) {
+            this.contacts[this.activePosition].messages.splice(index, 1);
+            this.showTendina(index);
         }
     },
     mounted() {
