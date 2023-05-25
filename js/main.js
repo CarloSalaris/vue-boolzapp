@@ -179,6 +179,9 @@ createApp({
                         }
                     ],
                 }
+            ],
+            quotes: [
+
             ]
             
         }
@@ -195,7 +198,8 @@ createApp({
             })
         },
         addMessage() {
-            if (this.newMessage !== '' && this.newMessage.split(' ').length === 0) {this.contacts[this.activePosition].messages.push({
+            if (this.newMessage !== '' && this.newMessage.split(' ').length > 0) {
+                this.contacts[this.activePosition].messages.push({
                 date: this.dateNow,
                 message: this.newMessage,
                 status: 'sent'
