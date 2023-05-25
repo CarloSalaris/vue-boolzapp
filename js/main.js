@@ -1,12 +1,12 @@
 const{createApp} = Vue
-let DateTime = luxon.DateTime;
+var DateTime = luxon.DateTime;
+
 createApp({
     data(){
         return {
             activePosition: 0,
             newMessage: '',
             contactSearch: '',
-            DateTime: DateTime,
             dateNow: (DateTime.now()).toLocaleString(DateTime.TIME_24_SIMPLE),
             msgArrowUpPosition: null,
             msgArrowDownPosition: null,

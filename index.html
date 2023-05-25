@@ -85,7 +85,7 @@
                         </div>
                     </div>
                     <div class="activeTime">
-                        {{(contact.messages[contact.messages.length - 1].date).toLocaleString(DateTime.TIME_24_SIMPLE)}}
+                        {{(contact.messages[contact.messages.length - 1].date.split(' ')[0]).toLocaleString()}}
                     </div>
 
                 </div>
