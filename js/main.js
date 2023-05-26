@@ -256,7 +256,10 @@ createApp({
             }, 1000);
             
         },
-
+        emptyChat() {
+            this.contacts[this.activePosition].messages.length = 0;
+            this.chatMenu = !this.chatMenu;
+        },
         emptyMessage() {
             if (this.newMessage === '' || this.newMessage.trim().length === 0) {
                 return true;
