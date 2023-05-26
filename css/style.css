@@ -83,6 +83,7 @@ footer {
 
 /* THUMB PREVIEW OF CONTACTS */
 .contactPreview {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 7px;
@@ -95,6 +96,17 @@ footer {
 
 .contactPreview:hover {
     background-color:#f3f3f39a;
+}
+
+.contactPreview a.arrowTendina {
+    display: none;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 20px;
+}
+
+.contactPreview:hover a.arrowTendina  {
+    display: inline-block;
 }
 
 .thumbActive {
