@@ -95,11 +95,11 @@
                         <img class="rounded" :src="contact.avatar" alt="Profile pic">
                         <div class="contactInfo">
                             <h4>{{contact.name}}</h4>
-                            <span class="lastReceivedPreview">{{contact.messages[contact.messages.length - 1].message}}</span>
+                            <span class="lastReceivedPreview">{{lastmsgPreview(idx)}}</span>
                         </div>
                     </div>
                     <div class="activeTime">
-                        {{(contact.messages[contact.messages.length - 1].date.split(' ')[0]).toLocaleString()}}
+                        {{lastmsgDate(idx)}}
                     </div>
 
                 </div>
@@ -115,7 +115,7 @@
                     <img class="rounded" :src="contacts[activePosition].avatar" alt="Profile pic">
                     <div class="contactInfo">
                         <h4>{{contacts[activePosition].name}}</h4>
-                        <span v-if="!pcTyping">Ultimo accesso {{contacts[activePosition].messages[contacts[activePosition].messages.length - 1].date}} </span>
+                        <span v-if="!pcTyping">Ultimo accesso: {{lastReceived().date}} </span>
                         <span v-if="pcTyping">{{tempInfoMsg}}</span>
                     </div>
                 </div>

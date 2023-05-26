@@ -197,6 +197,42 @@ createApp({
     },
 
     methods: {
+        emptyMessageArray(){
+            if (this.contacts[this.activePosition].messages.length === 0) {
+                console.log('non ci sono messaggi');
+                return true;
+            } else {
+                return false;
+            }
+        },
+        lastmsgPreview(index){
+            if (!this.emptyMessageArray) {
+                let message = this.contacts(index).messages[this.contacts(index).messages.length - 1].message;
+                return message;
+            }
+        },
+        lastmsgDate(index) {
+            if (!this.emptyMessageArray) {
+                let time = (this.contacts(index).messages[this.contacts(index).messages.length - 1].date.split(' ')[0]).toLocaleString();
+                return time;
+            }
+        },
+        lastReceived() {
+            const msgsArr = this.contacts[this.activePosition].messages;
+            if (msgsArr.length > 0) {
+                
+                let msgsReceivedArr = msgsArr.filter(message => message.status === 'received');
+                if (msgsReceivedArr.length > 0) {
+                return msgsReceivedArr[msgsReceivedArr.length - 1];
+                }else {
+                    let empty = '';
+                    return empty;
+                }
+            } else {
+                let empty = '';
+                return empty;
+            }
+        },
         showSelected(value) {
 			this.activePosition = value;
 		},
@@ -215,7 +251,10 @@ createApp({
                 console.log(this.tempInfoMsg);
                 // 3 seconds after is received (shows time)
                 setTimeout(()=>{this.pcTyping = false}, 3000);
+                console.log(this.lastReceived());
+
             }, 1000);
+            
         },
 
         emptyMessage() {
@@ -261,3 +300,4 @@ createApp({
         console.log("ho caricato l'app");
     }
 }).mount("#app")
+/*  */
