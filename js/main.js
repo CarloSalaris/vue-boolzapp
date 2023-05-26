@@ -214,6 +214,9 @@ createApp({
         },
         deleteChat() {
             this.contacts.splice(this.activePosition, 1);
+            if (this.activePosition = this.contacts.length - 1) {
+                this.activePosition = this.contacts.length - 1;
+            }
             this.chatMenu = !this.chatMenu;
         },
         lastReceived() {
