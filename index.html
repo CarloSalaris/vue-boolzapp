@@ -130,9 +130,9 @@
                         <div class="menuTendina"
                             v-if="chatMenu">
                             <ul>
-                                <li><a href="#" @click="emptyChat()">Delete messages</a></li>
+                                <li><a href="#" @click.stop="emptyChat()">Delete messages</a></li>
                                 <li><a href="#"
-                                 @click.stop="">Delete chat</a></li>
+                                 @click.stop="deleteChat()">Delete chat</a></li>
                             </ul>
                         </div>
                     </div>

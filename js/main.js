@@ -212,6 +212,10 @@ createApp({
                 return time;
             }
         },
+        deleteChat() {
+            this.contacts.splice(this.activePosition, 1);
+            this.chatMenu = !this.chatMenu;
+        },
         lastReceived() {
             const msgsArr = this.contacts[this.activePosition].messages;
             if (msgsArr.length > 0) {
