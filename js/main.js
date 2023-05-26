@@ -197,23 +197,18 @@ createApp({
     },
 
     methods: {
-        emptyMessageArray(){
-            if (this.contacts[this.activePosition].messages.length === 0) {
-                console.log('non ci sono messaggi');
-                return true;
-            } else {
-                return false;
-            }
-        },
+        
         lastmsgPreview(index){
-            if (!this.emptyMessageArray) {
-                let message = this.contacts(index).messages[this.contacts(index).messages.length - 1].message;
+            if (this.contacts[index].messages.length !== 0) {
+                let message = this.contacts[index].messages[this.contacts[index].messages.length - 1].message;
                 return message;
+            } else {
+                console.log('non ci sono messaggi');
             }
         },
         lastmsgDate(index) {
-            if (!this.emptyMessageArray) {
-                let time = (this.contacts(index).messages[this.contacts(index).messages.length - 1].date.split(' ')[0]).toLocaleString();
+            if (this.contacts[index].messages.length !== 0) {
+                let time = (this.contacts[index].messages[this.contacts[index].messages.length - 1].date.split(' ')[0]).toLocaleString();
                 return time;
             }
         },
