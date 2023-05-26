@@ -41,6 +41,7 @@
                     <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                 </div>
             </header>
+            
             <!-- warning -->
             <div class="bellWarning thumbPreview">
                 <span class="rounded">
@@ -170,11 +171,11 @@
                     v-model="newMessage"
                     @keyup.enter="addMessage">
                 <span>
-                    <a href="#" v-if="newMessage === ''">
+                    <a href="#" v-if="emptyMessage()">
                         <i class="fa-solid fa-microphone"></i>
                     </a>
 
-                    <a href="#" v-if="newMessage !== ''" @click="addMessage()">
+                    <a href="#" v-if="!emptyMessage()" @click="addMessage()">
                         <i class="fa-regular fa-paper-plane"></i>
                     </a>
                 </span>

@@ -202,10 +202,18 @@ createApp({
                 message: 'ok',
                 status: 'received'
             })
-            
         },
+
+        emptyMessage() {
+            if (this.newMessage === '' || this.newMessage.trim().length === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+
         addMessage() {
-            if (this.newMessage !== '') {
+            if (!this.emptyMessage()) {
                 this.contacts[this.activePosition].messages.push({
                 date: this.dateNow,
                 message: this.newMessage,
