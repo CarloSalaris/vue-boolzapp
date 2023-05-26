@@ -38,7 +38,20 @@
                 <div class="iconsContainer">
                     <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
                     <a href="#"><i class="fa-solid fa-message"></i></a>
-                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                    <div class="clickTendina">
+                        <!-- Icon -->
+                        <a href="#"
+                            @click="userMenu = !userMenu"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        <!-- Menu tendina -->
+                        <div class="menuTendina"
+                            v-if="userMenu">
+                            <ul>
+                                <li><a href="#">info</a></li>
+                                <li><a href="#"
+                                 @click.stop="">change account</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </header>
             
