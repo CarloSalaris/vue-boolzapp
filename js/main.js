@@ -10,6 +10,8 @@ createApp({
             dateNow: (DateTime.now()).toLocaleString(DateTime.TIME_24_SIMPLE),
             msgArrowUpPosition: null,
             msgTendinaPosition: null,
+            pcTyping: false,
+            tempInfoMsg: '',
             userAccount: [
                 {
                     name: 'Carlo',
@@ -197,11 +199,21 @@ createApp({
 			this.activePosition = value;
 		},
         receiveMessage() {
-            this.contacts[this.activePosition].messages.push({
-                date: this.dateNow,
-                message: 'ok',
-                status: 'received'
-            })
+            // while PC is "texting" (shows "sta scrivendo...")
+            this.tempInfoMsg = 'Sta scrivendo...'
+            this.pcTyping = true;
+            // right after the message is received (shows "online")
+            setTimeout(()=>
+                {this.contacts[this.activePosition].messages.push({
+                    date: this.dateNow,
+                    message: 'ok',
+                    status: 'received'
+                });
+                this.tempInfoMsg = 'online';
+                console.log(this.tempInfoMsg);
+                // 3 seconds after is received (shows time)
+                setTimeout(()=>{this.pcTyping = false}, 3000);
+            }, 1000);
         },
 
         emptyMessage() {
@@ -219,7 +231,7 @@ createApp({
                 message: this.newMessage,
                 status: 'sent'
             })
-            setTimeout(this.receiveMessage, 1000)
+            this.receiveMessage();
             }
 
             this.newMessage = '';

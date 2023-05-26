@@ -102,7 +102,8 @@
                     <img class="rounded" :src="contacts[activePosition].avatar" alt="Profile pic">
                     <div class="contactInfo">
                         <h4>{{contacts[activePosition].name}}</h4>
-                        <span>Ultimo accesso {{contacts[activePosition].messages[contacts[activePosition].messages.length - 1].date}} </span>
+                        <span v-if="!pcTyping">Ultimo accesso {{contacts[activePosition].messages[contacts[activePosition].messages.length - 1].date}} </span>
+                        <span v-if="pcTyping">{{tempInfoMsg}}</span>
                     </div>
                 </div>
                 <div class="iconsContainer">
