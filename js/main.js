@@ -12,6 +12,7 @@ createApp({
             msgTendinaPosition: null,
             pcTyping: false,
             tempInfoMsg: '',
+            chatMenu: false,
             userAccount: [
                 {
                     name: 'Carlo',

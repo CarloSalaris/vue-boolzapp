@@ -6,7 +6,7 @@
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 body {
@@ -162,6 +162,7 @@ span.rounded {
 
 /* ICONS */
 .iconsContainer {
+    position: relative;
     display: flex;
     padding: 10px;
     gap: 15px;
@@ -219,12 +220,14 @@ span.rounded {
         display: inline-block;
     }
 
-
-.msgTendina {
+.clickTendina {
+    position: relative;
+}
+.menuTendina {
     position: absolute;
     top: 25px;
-    right: 5px;
-    width: 150px;
+    right: 0;
+    width:max-content;
     height:min-content;
     background-color: #f1f1f1;
     padding: 15px;
@@ -233,12 +236,12 @@ span.rounded {
     box-shadow: 1px 1px 5px 1px #88888866;
 }
 
-.msgTendina a {
+.menuTendina a {
     text-decoration: none;
     color:#7e7e7e;
 }
 
-.msgTendina a:hover {
+.menuTendina a:hover {
     color: black;
 }
 /***************
@@ -299,6 +302,7 @@ span.rounded {
 #contactsListContainer {
     height: calc(100% - 160px);
     overflow-y: scroll;
+    padding: 5px;
 }
 
 /* RIGHT COLUMN */

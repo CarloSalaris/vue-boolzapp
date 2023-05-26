@@ -109,7 +109,21 @@
                 <div class="iconsContainer">
                     <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="#"><i class="fa-solid fa-paperclip"></i></a>
-                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                    <div class="clickTendina">
+                        <!-- Icon -->
+                        <a href="#"
+                            @click="chatMenu = !chatMenu"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        <!-- Menu tendina -->
+                        <div class="menuTendina"
+                            v-if="chatMenu">
+                            <ul>
+                                <li><a href="#">Delete messages</a></li>
+                                <li><a href="#"
+                                 @click.stop="">Delete chat</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </header>
 
@@ -142,7 +156,7 @@
                         </a>
 
                         <!-- Menu tendina -->
-                        <div class="msgTendina"
+                        <div class="menuTendina"
                             v-if="msgTendinaPosition === idx">
                             <ul>
                                 <li><a href="#">Message info</a></li>
