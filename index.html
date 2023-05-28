@@ -31,7 +31,8 @@
         <!-- MODALE NEW CHAT -->
         <div id="modale"
             v-if="modale">
-            <div class="inputContainer">
+            <div class="inputContainer"
+            @keyup.enter="createNewChat">
                 <h1>Create a new chat</h1>
                 <!-- inputs -->
                 <input type="text"
