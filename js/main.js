@@ -184,7 +184,18 @@ createApp({
                 }
             ],
             quotes: [
-
+                "The greatest glory in living lies not in never falling, but in rising every time we fall.\n- Nelson Mandela",
+                "Life is what happens when you're busy making other plans.\n- John Lennon",
+                "Tell me and I forget. Teach me and I remember. Involve me and I learn.\n- Benjamin Franklin",
+                "It is during our darkest moments that we must focus to see the light.\n- Aristotle",
+                "If I'm not back in five minutes, just wait longer.\n- Ace Ventura",
+                "WE APOLOGIZE FOR THE INCONVENIENCE\n- God",
+                "I must not fear. / Fear is the mind-killer. / Fear is the little-death that brings total obliteration. / I will face my fear. / I will permit it to pass over me and through me. / And when it has gone past I will turn the inner eye to see its path. / Where the fear has gone there will be nothing. / Only I will remain.\n- Bene Gesserit, Litany Against Fear, Dune",
+                "I find your lack of faith disturbing.\n- Darth Vader",
+                "Try not. Do, or do not. There is no try.\n- Yoda",
+                "If we knew what it was we were doing, it would not be called research, would it?\n- Albert Einstein",
+                "My name is Inigo Montoya. You killed my father. Prepare to die!\n- Inigo, The Princess Bride",
+                "These aren't the droids you're looking for.\n- Obi-Wan, Star Wars"
             ]
             
         }
@@ -197,6 +208,12 @@ createApp({
     },
 
     methods: {
+
+        randomQuotePicker() {
+            let num = Math.floor(Math.random() * this.quotes.length)
+            let quote = this.quotes[num];
+            return quote;
+        },
         
         lastmsgPreview(index){
             if (this.contacts[index].messages.length !== 0) {
@@ -242,10 +259,10 @@ createApp({
             this.tempInfoMsg = 'Sta scrivendo...'
             this.pcTyping = true;
             // right after the message is received (shows "online")
-            setTimeout(()=>
-                {this.contacts[this.activePosition].messages.push({
+            setTimeout(()=>{
+                this.contacts[this.activePosition].messages.push({
                     date: this.dateNow,
-                    message: 'ok',
+                    message: this.randomQuotePicker(),
                     status: 'received'
                 });
                 this.tempInfoMsg = 'online';
