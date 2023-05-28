@@ -34,10 +34,18 @@
             <div class="inputContainer">
                 <h1>Create a new chat</h1>
                 <!-- inputs -->
-                <input type="text" name="newContactName" id="newContactName" placeholder="Insert new name..."><br>
-                <input type="text" name="newContactImage" id="newContactImage" placeholder="Insert new contact's Image link...">
+                <input type="text"
+                    name="newContactName"
+                    id="newContactName"
+                    placeholder="Insert new name..."
+                    v-model="newContactName"><br>
+                <input type="text"
+                    name="newContactImage"
+                    id="newContactImage"
+                    placeholder="Insert new contact's Image link..."
+                    v-model="newContactImg">
                 <!-- Button -->
-                <button>INVIA</button>
+                <button @click="createNewChat">INVIA</button>
             </div>
 
         </div>

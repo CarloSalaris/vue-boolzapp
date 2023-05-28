@@ -15,6 +15,8 @@ createApp({
             userMenu: false,
             chatMenu: false,
             modale: false,
+            newContactName: '',
+            newContactImg: '',
             userAccount: [
                 {
                     name: 'Carlo',
@@ -209,6 +211,22 @@ createApp({
     },
 
     methods: {
+
+        createNewChat() {
+            
+            this.contacts.push({
+                name: this.newContactName,
+                avatar: this.newContactImg,
+                visible: true,
+                messages: []
+            })
+
+            console.log(this.newContactName, this.newContactImg);
+            
+            this.newContactName = '';
+            this.newContactImg = '';
+            this.modale = false;
+        },
 
         showModale() {
             this.modale = true;
