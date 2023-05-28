@@ -14,6 +14,7 @@ createApp({
             tempInfoMsg: '',
             userMenu: false,
             chatMenu: false,
+            modale: false,
             userAccount: [
                 {
                     name: 'Carlo',
@@ -208,6 +209,11 @@ createApp({
     },
 
     methods: {
+
+        showModale() {
+            this.modale = true;
+            this.userMenu = !this.userMenu;
+        },
 
         randomQuotePicker() {
             let num = Math.floor(Math.random() * this.quotes.length)

@@ -27,6 +27,12 @@
     
     <!-- MAIN CONTAINER -->
     <div id="app">
+
+        <!-- MODALE NEW CHAT -->
+        <div id="modale"
+        v-if="modale">
+
+        </div>
     
         <!-- LEFT COLUMN -->
         <div id="leftCol">
@@ -46,9 +52,12 @@
                         <div class="menuTendina"
                             v-if="userMenu">
                             <ul>
-                                <li><a href="#">info</a></li>
+                                <li><a href="#">Info</a></li>
                                 <li><a href="#"
-                                 @click.stop="">change account</a></li>
+                                 @click.stop="">Change account</a></li>
+                                <li><a href="#"
+                                    @click.stop="showModale()">New chat</a></li>
+
                             </ul>
                         </div>
                     </div>

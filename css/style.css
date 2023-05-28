@@ -81,6 +81,18 @@ footer {
     justify-content:space-evenly;
 }
 
+/* MODALE TO ADD NEW CHAT */
+#modale {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background-color: #7e7e7e69;
+    z-index: 10;
+}
+
 /* THUMB PREVIEW OF CONTACTS */
 .contactPreview {
     position: relative;
