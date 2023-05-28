@@ -102,10 +102,10 @@
                         {{lastmsgDate(idx)}}
                     </div>
 
-                    <!-- arrow message tendina -->
+                    <!-- X delete button -->
                     <a href="#"
                     class="arrowTendina"
-                    @click.stop="deleteChat">
+                    @click.stop="deleteChat(idx)">
                         <!-- arrowDown -->
                         <i class="fa-solid fa-xmark"
                             v-if="msgArrowUpPosition !== idx"></i>

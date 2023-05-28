@@ -212,7 +212,8 @@ createApp({
                 return time;
             }
         },
-        deleteChat() {
+        deleteChat(index) {
+            this.activePosition = index;
             this.contacts.splice(this.activePosition, 1);
             this.activePosition = 0;
             
