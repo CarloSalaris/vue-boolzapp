@@ -32,7 +32,8 @@
         <div id="modale"
             v-if="modale">
             <div class="inputContainer"
-            @keyup.enter="createNewChat">
+            @keyup.enter="createNewChat"
+            @keyup.delete="modale = false">
                 <h1>Create a new chat</h1>
                 <!-- inputs -->
                 <input type="text"
