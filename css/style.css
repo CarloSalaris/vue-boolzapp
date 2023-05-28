@@ -87,10 +87,39 @@ footer {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 70%;
     height: 70%;
-    background-color: #7e7e7e69;
+    background-color: #7e7e7eae;
+    color: #3adbcb;
     z-index: 10;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.inputContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.inputContainer h1 {
+    margin-bottom: 35px;
+}
+
+.inputContainer input {
+    margin-bottom: 50px;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+.inputContainer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
 }
 
 /* THUMB PREVIEW OF CONTACTS */
